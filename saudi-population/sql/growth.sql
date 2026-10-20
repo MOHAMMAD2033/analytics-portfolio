@@ -1,0 +1,1 @@
+WITH endpoints AS (SELECT region,MAX(CASE WHEN year=2010 THEN population END) AS pop_2010,MAX(CASE WHEN year=2022 THEN population END) AS pop_2022 FROM population GROUP BY region) SELECT *,1.0*(pop_2022-pop_2010)/pop_2010 AS growth_2010_2022 FROM endpoints ORDER BY growth_2010_2022 DESC;

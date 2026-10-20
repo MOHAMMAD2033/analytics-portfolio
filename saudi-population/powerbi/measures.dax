@@ -1,0 +1,11 @@
+Population Latest Year = VAR LastYear = MAX(DimYear[Year]) RETURN CALCULATE(SUM(Population[Population]), DimYear[Year] = LastYear)
+
+Regions = DISTINCTCOUNT(Population[RegionCode])
+
+Latest Year = MAX(DimYear[Year])
+
+Population 2010 = CALCULATE(SUM(Population[Population]), REMOVEFILTERS(DimYear), DimYear[Year] = 2010)
+
+Growth Since 2010 = DIVIDE([Population Latest Year] - [Population 2010], [Population 2010])
+
+Annual Population = SUM(Population[Population])

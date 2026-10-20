@@ -1,0 +1,1 @@
+SELECT customer_id, CAST(julianday('2017-12-31')-julianday(MAX(order_date)) AS INTEGER) AS recency_days, COUNT(DISTINCT order_id) AS frequency, SUM(sales) AS monetary, SUM(profit) AS profit FROM sales GROUP BY customer_id;

@@ -1,0 +1,14 @@
+{
+  "line_items": 9994.0,
+  "orders": 5009.0,
+  "customers": 793.0,
+  "sales": 2297200.8603,
+  "profit": 286397.0217,
+  "profit_margin": 0.12467217240315605,
+  "average_order_value": 458.6146656618087,
+  "loss_making_lines": 1871.0,
+  "lowest_profit_subcategory": "Tables",
+  "lowest_subcategory_profit": -17725.4811,
+  "date_start": "2014-01-03",
+  "date_end": "2017-12-30"
+}

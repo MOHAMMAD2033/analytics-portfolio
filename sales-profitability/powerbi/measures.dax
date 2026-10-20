@@ -1,0 +1,11 @@
+Total Sales = SUM(Sales[Sales])
+
+Total Profit = SUM(Sales[Profit])
+
+Profit Margin = DIVIDE([Total Profit], [Total Sales])
+
+Orders = DISTINCTCOUNT(Sales[OrderId])
+
+Customers = DISTINCTCOUNT(Sales[CustomerId])
+
+Average Order Value = DIVIDE([Total Sales], [Orders])

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.pbi/
+.env
+**/outputs/analysis.sqlite
+**/outputs/clean_data.csv
+**/outputs/dashboard_data.json

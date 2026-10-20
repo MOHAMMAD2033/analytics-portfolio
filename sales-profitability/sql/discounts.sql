@@ -1,0 +1,1 @@
+SELECT CASE WHEN discount=0 THEN 'No discount' WHEN discount<=0.2 THEN 'Up to 20%' ELSE 'Above 20%' END AS discount_band, COUNT(*) AS lines, SUM(sales) AS sales, SUM(profit) AS profit, SUM(profit)/NULLIF(SUM(sales),0) AS profit_margin FROM sales GROUP BY discount_band;

@@ -1,0 +1,1 @@
+WITH annual AS (SELECT year,SUM(sales) AS sales FROM sales GROUP BY year), prev AS (SELECT year,sales,LAG(sales) OVER(ORDER BY year) AS prior_sales FROM annual) SELECT *, (sales-prior_sales)/NULLIF(prior_sales,0) AS yoy_growth FROM prev ORDER BY year;

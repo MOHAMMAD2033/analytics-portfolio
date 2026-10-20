@@ -1,0 +1,12 @@
+{
+  "source_sha256": "383917d3f74d9ff0e71454c78331f76b5e5197076e0672b84d88482e21580d1b",
+  "source_rows": 9994,
+  "kind": "sales",
+  "repeated_business_rows_with_distinct_row_ids": 1,
+  "decision": "Preserve distinct source Row IDs. Repeated business rows are flagged, not proven errors.",
+  "missing_postal_codes": 0,
+  "checks_passed": true,
+  "clean_rows": 9994,
+  "rows_removed": 0,
+  "removal_reason": "None"
+}

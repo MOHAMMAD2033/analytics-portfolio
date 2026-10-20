@@ -1,0 +1,167 @@
+{
+  "name": "SaudiPopulation",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "tables": [
+      {
+        "name": "Population",
+        "columns": [
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RegionCode",
+            "dataType": "int64",
+            "sourceColumn": "RegionCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Population",
+            "dataType": "int64",
+            "sourceColumn": "Population",
+            "summarizeBy": "sum"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Population",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"TZZJkt1ACAUv9BfFDGdx+P7X8KMkkCN6Q4ZaIqsY/p8/fOj86OfMekT+/hpQAzMKsQdwg/RIe58QgODSGKANNCuqHmANSiSIHuAAyQjZHxAPMJN8QDY4cjz0AXXfEcXOF3BnmtqpPv/CnWkSsogXdKZpRcjlecf58c/F8GiMHIDrYeORAyhCyj5y3HL4jxw5AOUkPiMHkCdJfOQYqYc7nZFrQBUWI4d/CTIZ22rgB/4+cgCVyKtGrp9AHrly/VImdRk5XIQD5N5cgyzWGjkAfIM5Rw4gVS1i5BpkOu3NARTspEYOJ3LsuNXIXSClMnINTmXuzV2AvM7INSj46sg978BdjhwACU5g5VBUR1BjNnINcNlJIwdAOI6wkWvgHnMvekGxnBg5AFY/75lCrkGan725B+S8Iy9wyumGesBhr5EDEFSQb1ned9QRHrl+QpyiRg7H7Bo1BUMNUkRpbw65IuF83wE5ADZH140cQB9Y6cgBuDiXjRwA8jbXkWuAdqkzcgChKNy9uQsOv7bcmSq+IRwj1+9Ao/vK4cOEujUdOTS7eqXSyAGgrs90A1+AqqstSwB3nzOFHECgHnzlGhTG0MoBpMuxHSgNcKRZI/c84WNbzxMubzfwzbQMo23lGqjYd3Po7cPofhs5fEcwuPbiEAMcHTXEWWjbMQtME5mRBTHEajQDyjrGaMmdk4GRdpDTWHWMg9ob61jwgXFCjE7yVUKMC6816vjk27zc+aHbz5T3+aEGGFPVxwexHaud/YhDWNYHx4rXxF4UYkZPrQ9iY387Hz6IA4Mgxyd7l0BwfDpmmj1RN06WHYswpqpcn44NW2B8ECsG+vpgsgaG0c57xJjNskMDcZHPfQli1BCGyPggRvXS1h3iu+rGB7HSFAh8OjbRHfQdy/rXjXEi20+IHd9fH8RW+vpz5yfYvDOfsfP6zzHSdw42ITyqu8IuUXLdYXFJSc5/6SXMErxml0Tk1JJfIoQu22l4CdpyziPfZ7Cmd5M9xOjdsfzkLIGv0i7qJiis2jpsokerPlMMTsYU3LHRADfte3cNMLzPpwmQGEc78BtU2beqe7RiOJ3vdwiAor63IBt08ryG9wnhvcILUJOfH0Co6G6zBthD708ovplaL56zcljfuEXbumyAyrYdHA36R8Z2WoNCsfHKNcCa9ZXD2sTotd1mDZh2OsQDcMk7E++/pNEn16DYPjkAITTFyvU70MOfXD/Rv7JWDqtX0UO8cgBOlDvwG6DUaAd+A+R5tu96w9E3OOwCMf3vFyQAyLuJWq5BHvturoGes6v6gpDYVd0gCrmuXAOdJco3064ODJi//wA=\", BinaryEncoding.Base64), Compression.Deflate)), {\"Year\", \"RegionCode\", \"Population\"}),",
+                "    Typed = Table.TransformColumnTypes(Source, {{\"Year\", Int64.Type}, {\"RegionCode\", Int64.Type}, {\"Population\", Int64.Type}})",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Population Latest Year",
+            "expression": "VAR LastYear = MAX(DimYear[Year]) RETURN CALCULATE(SUM(Population[Population]), DimYear[Year] = LastYear)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Regions",
+            "expression": "DISTINCTCOUNT(Population[RegionCode])",
+            "formatString": "0"
+          },
+          {
+            "name": "Latest Year",
+            "expression": "MAX(DimYear[Year])",
+            "formatString": "0"
+          },
+          {
+            "name": "Population 2010",
+            "expression": "CALCULATE(SUM(Population[Population]), REMOVEFILTERS(DimYear), DimYear[Year] = 2010)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Growth Since 2010",
+            "expression": "DIVIDE([Population Latest Year] - [Population 2010], [Population 2010])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Annual Population",
+            "expression": "SUM(Population[Population])",
+            "formatString": "#,0"
+          }
+        ]
+      },
+      {
+        "name": "DimRegion",
+        "columns": [
+          {
+            "name": "RegionCode",
+            "dataType": "int64",
+            "sourceColumn": "RegionCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimRegion",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"Vc7NCsIwEATgV5E9r2Ctv8cKghQsWLyFHEYaTUxtIG0P+vQmqRdv8y2zMEJkTLV5o9EkWSyZzrAWCXlEY7pJK6YLeqVeEWumI/pB+W5Wq4dxXTxumIpQ8DFvma64udFG7JhOMG2Me6bK+UH/f2YLphIfTAiLKjz9T2FS0c4P0EjME0s33knKLw==\", BinaryEncoding.Base64), Compression.Deflate)), {\"RegionCode\", \"Region\"}),",
+                "    Typed = Table.TransformColumnTypes(Source, {{\"RegionCode\", Int64.Type}, {\"Region\", type text}})",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimYear",
+        "columns": [
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimYear",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"JcyxEQAgCATBhgzgVdRaGPpvw9GLNttMmVu1h4Ogw4AJAQs2nI9YxCJVXQ==\", BinaryEncoding.Base64), Compression.Deflate)), {\"Year\"}),",
+                "    Typed = Table.TransformColumnTypes(Source, {{\"Year\", Int64.Type}})",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "759ac1c2-aaea-56a4-9fd1-c8a14572931b",
+        "fromTable": "Population",
+        "fromColumn": "RegionCode",
+        "toTable": "DimRegion",
+        "toColumn": "RegionCode",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      },
+      {
+        "name": "947da91a-45f4-5e87-88e1-4ec27a15613c",
+        "fromTable": "Population",
+        "fromColumn": "Year",
+        "toTable": "DimYear",
+        "toColumn": "Year",
+        "crossFilteringBehavior": "oneDirection",
+        "fromCardinality": "many",
+        "toCardinality": "one"
+      }
+    ],
+    "dataSourceDefaultVersion": "powerBI_V3"
+  }
+}

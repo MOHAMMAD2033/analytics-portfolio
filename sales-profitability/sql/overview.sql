@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS line_items, COUNT(DISTINCT order_id) AS orders, COUNT(DISTINCT customer_id) AS customers, SUM(sales) AS sales, SUM(profit) AS profit, SUM(profit)/NULLIF(SUM(sales),0) AS profit_margin, SUM(sales)/COUNT(DISTINCT order_id) AS average_order_value, SUM(is_loss) AS loss_making_lines FROM sales;

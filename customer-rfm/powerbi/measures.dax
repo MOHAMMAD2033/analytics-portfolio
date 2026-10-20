@@ -1,0 +1,9 @@
+Customers = COUNTROWS(Customers)
+
+Historical Sales = SUM(Customers[Monetary])
+
+Average Recency = AVERAGE(Customers[RecencyDays])
+
+Average Frequency = AVERAGE(Customers[Frequency])
+
+Historical Profit = SUM(Customers[Profit])

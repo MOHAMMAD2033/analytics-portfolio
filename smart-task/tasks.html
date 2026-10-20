@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartTask | Tasks</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tasks.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SmartTask</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tasks.html" class="active">Tasks</a>
+    <a href="about.html">About Us</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="hero-content">
+    <span class="tag">Task Workspace</span>
+
+    <h1>Manage your tasks clearly.</h1>
+
+    <p>
+      Add tasks, choose priorities, set due dates, and connect each task
+      to a goal that matters to you.
+    </p>
+  </div>
+</section>
+
+<section class="tasks-page">
+
+  <div class="section-title">
+    <h2>Create a New Task</h2>
+    <p>Fill in the details below to organize your task.</p>
+  </div>
+
+  <form id="taskForm" class="task-form">
+
+    <label for="taskTitle">Task Title</label>
+    <input
+      type="text"
+      id="taskTitle"
+      placeholder="What do you need to do?"
+      required
+    >
+
+    <label for="taskDescription">Description</label>
+    <textarea
+      id="taskDescription"
+      placeholder="Write a short description"
+    ></textarea>
+
+    <label>Priority</label>
+    <div class="option-row">
+      <label>
+        <input type="radio" name="priority" value="High" checked>
+        High
+      </label>
+
+      <label>
+        <input type="radio" name="priority" value="Medium">
+        Medium
+      </label>
+
+      <label>
+        <input type="radio" name="priority" value="Low">
+        Low
+      </label>
+    </div>
+
+    <label>Due Date</label>
+    <div class="option-row">
+      <label>
+        <input type="radio" name="due" value="Today" checked>
+        Today
+      </label>
+
+      <label>
+        <input type="radio" name="due" value="Tomorrow">
+        Tomorrow
+      </label>
+
+      <label>
+        <input type="radio" name="due" value="Daily">
+        Daily
+      </label>
+
+      <label>
+        <input type="radio" name="due" value="Custom">
+        Custom
+      </label>
+    </div>
+
+    <div id="customDateField" class="conditional-field">
+      <label for="taskDate">Custom Date</label>
+      <input type="date" id="taskDate" min="2025-01-01" max="2050-12-31">
+    </div>
+
+    <label for="taskTime">Time</label>
+    <input type="time" id="taskTime">
+
+    <div id="excludedDaysField" class="conditional-field">
+      <label>Excluded Days</label>
+
+      <div class="days-box">
+        <label><input type="checkbox" value="Sunday"> Sun</label>
+        <label><input type="checkbox" value="Monday"> Mon</label>
+        <label><input type="checkbox" value="Tuesday"> Tue</label>
+        <label><input type="checkbox" value="Wednesday"> Wed</label>
+        <label><input type="checkbox" value="Thursday"> Thu</label>
+        <label><input type="checkbox" value="Friday"> Fri</label>
+        <label><input type="checkbox" value="Saturday"> Sat</label>
+      </div>
+    </div>
+
+    <label for="taskGoal">Link to Goal Optional</label>
+    <input
+      type="text"
+      id="taskGoal"
+      placeholder="Example: Study, Health, Career"
+    >
+
+    <label for="taskReason">Why is this task important?</label>
+    <textarea
+      id="taskReason"
+      placeholder="Write why this task matters to you"
+    ></textarea>
+
+    <button type="submit" class="main-btn">Add Task</button>
+
+  </form>
+
+  <div class="section-title">
+    <h2>Your Tasks</h2>
+    <p>Your added tasks will appear here.</p>
+  </div>
+
+  <div id="taskList" class="task-list">
+
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-content">
+
+    <div>
+      <h3>SmartTask</h3>
+      <p>A simple task planner for students and busy users.</p>
+    </div>
+
+    <div>
+      <h3>Pages</h3>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="about.html">About Us</a>
+      <a href="support.html">Support</a>
+    </div>
+
+    <div>
+      <h3>Features</h3>
+      <p>Priority Levels</p>
+      <p>Due Dates</p>
+      <p>Excluded Days</p>
+      <p>Goal Linking</p>
+    </div>
+
+    <div>
+      <h3>Support</h3>
+      <p>Help Center</p>
+      <p>Privacy Policy</p>
+      <p>Terms of Service</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 SmartTask. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

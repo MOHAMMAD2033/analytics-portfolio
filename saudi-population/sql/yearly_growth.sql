@@ -1,0 +1,1 @@
+WITH previous AS (SELECT region,year,population,LAG(population) OVER(PARTITION BY region ORDER BY year) AS previous_population FROM population) SELECT *,1.0*(population-previous_population)/NULLIF(previous_population,0) AS yoy_growth FROM previous ORDER BY region,year;
