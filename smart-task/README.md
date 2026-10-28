@@ -1,23 +1,36 @@
-# Smart Task — University Project
+# Smart Task
 
-A front-end task planner built with HTML, CSS, and JavaScript.
+[← Back to all four projects](../README.md)
 
-## Purpose
-Help users organize daily tasks, assign priorities, and connect tasks with personal goals.
+**A simple website for organizing daily tasks and priorities.**
 
-## Implemented features
-- Add, edit, delete, and mark tasks complete.
-- Choose a priority and record a due date or daily schedule preference.
-- Save tasks in browser localStorage between visits.
-- Record a goal and why a task matters.
+## Project overview
 
-## Try locally
-Download the folder and open index.html in a browser. No backend or installation is required.
+My university front-end project helps users keep their tasks in one place, choose priorities, and connect tasks with personal goals.
+
+**Tools:** HTML · CSS · JavaScript · Browser localStorage
+
+## What I built
+
+- Website pages for the task planner, project information, and a support-form demonstration.
+- Task controls to add, edit, delete, and mark tasks complete.
+- Fields for priority, due date, and the reason a task matters.
+- Local browser storage to keep tasks between visits on the same browser.
+
+## Outcome
+
+A working front-end prototype that brings task entry, priorities, and completion tracking into one workflow.
+
+## Try it
+
+Download the repository and open [index.html](index.html) in your browser, then open the task page. No backend installation is required.
+
+[View task page code](tasks.html) · [JavaScript](js/app.js) · [Styles](css/)
 
 ## Scope
-This is the original user-supplied university prototype. Priorities are selected manually; the app does not use an AI ranking model. Due dates are recorded, but background reminders and recurring-task automation are not implemented. The support form is a front-end demonstration and does not send a message. Browser storage is local to the device; there is no account synchronization. Use sample tasks for this prototype.
 
-## Files
-- index.html, tasks.html, about.html, support.html: pages
-- css/: page styling
-- js/app.js: task interactions and local storage
+Priorities are selected manually. AI ranking, background reminders, recurring-task automation, and account synchronization are not implemented. The support form is a demonstration and does not send messages. Tasks are stored locally in the browser.
+
+## بالعربي
+
+مشروعي الجامعي عبارة عن موقع لتنظيم المهام اليومية. بنيت صفحات الموقع ووظائف إضافة المهام وتعديلها وحذفها وتحديد الأولوية وحالة الإنجاز، مع حفظها في المتصفح. الأولوية يحددها المستخدم يدويًا.
