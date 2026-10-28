@@ -1,46 +1,43 @@
-# Mohammad Almejnah — Data Analytics Portfolio
+# Mohammad Almejnah
+### Information Systems and Business Analytics Student
+Imam Abdulrahman Bin Faisal University · Dammam
 
-A student portfolio focused on turning data into clear reports and practical business questions using Python, SQL, and Power BI.
+I am interested in turning data into clear reports that help people understand business performance. My learning focuses on **Excel, SQL, Power BI, and Python/pandas**.
 
-## Explore the projects
+**Seeking a 16-week co-op placement starting 17 January 2027.**
 
-| Project | Question | Scope |
-|---|---|---|
-| [Superstore Sales & Profitability](sales-profitability/) | Which products generate sales but lose money? | 9,994 order lines |
-| [Customer RFM Segmentation](customer-rfm/) | How can customers be grouped for different outreach approaches? | 793 customers, five segments |
-| [Saudi Regional Population](saudi-population/) | How did population distribution change across regions? | 13 regions, 2010–2022 |
+## Explore my four projects
 
-Each project includes a concise explanation, a dashboard preview, Python code, SQL queries, source attribution, results, and Power BI project files.
+| Project | What it does | Work covered |
+| :--- | :--- | :--- |
+| [**01 · Superstore Sales & Profitability**](sales-profitability/) | Finds products that sell well but lose money. | Data preparation, sales and profit analysis, dashboard reporting |
+| [**02 · Customer RFM Segmentation**](customer-rfm/) | Groups customers by their purchase activity. | Customer summaries, segmentation rules, visual reporting |
+| [**03 · Saudi Population Analysis**](saudi-population/) | Compares population trends across Saudi regions. | Public data preparation, regional comparisons, trend reporting |
+| [**04 · Smart Task**](smart-task/) | Helps users organize daily tasks and priorities. | University web project using HTML, CSS, and JavaScript |
 
-### Sales and profitability
-[![Sales dashboard preview](sales-profitability/dashboard_preview.png)](sales-profitability/)
+**Start with a project title:** each page explains the idea, the work involved, the outcome, and how to explore the files.
 
-### Customer segmentation
-[![Customer dashboard preview](customer-rfm/dashboard_preview.png)](customer-rfm/)
+## Dashboard previews
 
-### Saudi regions
-[![Saudi population dashboard preview](saudi-population/dashboard_preview.png)](saudi-population/)
+### 01 · Superstore Sales & Profitability
+[![Sales and profitability preview](sales-profitability/dashboard_preview.png)](sales-profitability/)
 
-## Additional university project
+### 02 · Customer RFM Segmentation
+[![Customer segmentation preview](customer-rfm/dashboard_preview.png)](customer-rfm/)
 
-[Smart Task](smart-task/) — a task planner built with HTML, CSS, and JavaScript, with browser-based task storage.
+### 03 · Saudi Population Analysis
+[![Saudi population preview](saudi-population/dashboard_preview.png)](saudi-population/)
 
-## Run a project
+*These images are Python-rendered previews. Power BI project files are included; Desktop refresh/render and online publication have not yet been verified.*
 
-Download this repository, open a terminal in a project folder, install its requirements, and run:
+## About this portfolio
 
-```bash
-pip install -r requirements.txt
-python analysis.py
-python -m unittest discover -s tests
-```
+The three analytics projects are educational simulations developed with AI assistance. They demonstrate learning workflows using sample or historical data, rather than client work or measured business improvements. Smart Task is my university front-end prototype. Each project documents its source and scope.
 
-The pipeline creates a local database and interactive HTML dashboard. See each project README for methodology and instructions.
+## نبذة بالعربي
 
-## About the work
+أنا محمد المجنه، طالب نظم المعلومات وتحليلات الأعمال بجامعة الإمام عبدالرحمن بن فيصل. مهتم بتحليل البيانات وبناء التقارير ولوحات المعلومات، وأبحث عن فرصة تدريب تعاوني أطبق فيها ما تعلمته وأطور مهاراتي.
 
-These are educational simulations prepared with AI assistance. Findings describe the sample or historical data; they do not claim commercial impact. Preview images are rendered independently in Python, not screenshots from Power BI. Power BI PBIP source files are included; Desktop refresh/render and Power BI Service publication remain to be verified.
+المشاريع الأربعة: **تحليل المبيعات والربحية، تقسيم العملاء، تحليل السكان في السعودية، وموقع Smart Task لتنظيم المهام.** اضغط اسم المشروع لمعرفة فكرته وخطوات العمل ونتيجته.
 
-## بالعربي
-
-ملف أعمال تعليمي في تحليل البيانات: تحليل المبيعات والربحية، وتقسيم العملاء، وتحليل السكان في المناطق السعودية. افتح أي مشروع للاطلاع على فكرته وصورته وملفاته. أُعدّت المحاكاة بمساعدة الذكاء الاصطناعي، ومصادر البيانات وطريقة التحليل موضحة داخل كل مشروع.
+[GitHub profile](https://github.com/MOHAMMAD2033)
