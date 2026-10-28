@@ -1,4 +1,49 @@
-# Saudi Regional Population Analysis
+# Saudi Population Analysis
+
+[← Back to all four projects](../README.md)
+
+**How did population distribution change across Saudi regions?**
+
+A historical analysis of official Saudi population data, presented as regional comparisons and trends over time.
+
+## Tools and data
+
+**Tools:** Python/pandas · SQLite/SQL · Power BI project files · DAX
+
+**Data:** General Authority for Statistics (GASTAT), historical population series for 2010–2022. [Source details](SOURCE.md)
+
+## Work covered in my AI-assisted project
+
+- Prepared population values and organized the data by region and year.
+- Separated national totals from regional records to avoid double counting.
+- Used SQL and visual summaries to compare regions and historical growth.
+
+This is an educational portfolio simulation developed with AI assistance.
+
+## Main outcome
+
+A clear comparison of 13 Saudi regions over 2010–2022. The analysis describes historical population, not current estimates.
+
+## Preview
+
+![Saudi Population Analysis preview](dashboard_preview.png)
+
+*Python-rendered preview, not a Power BI screenshot. Power BI Desktop refresh/render and online publication remain unverified.*
+
+## Explore the work
+
+- [SQL queries](sql/)
+- [Analysis results](outputs/)
+- [Power BI files](powerbi/) · [Opening instructions](powerbi/OPEN_IN_POWER_BI.md)
+- [Python entry point](analysis.py)
+
+## بالعربي
+
+تحليل بيانات سكانية رسمية لمقارنة مناطق المملكة وتغير السكان عبر السنوات. يشمل تنظيم البيانات وتجنب تكرار الإجماليات وعرض الاتجاهات.
+
+<details>
+<summary>Technical notes, method, and run instructions</summary>
+
 
 **Portfolio simulation · AI-assisted implementation · October 2026**
 
@@ -65,3 +110,5 @@ See `SOURCE.md`. This project was prepared with AI assistance for learning and p
 
 Combine this historical population view with current demand, income, competition and operating cost data before any site-selection decision. Do not infer causal drivers from this table.
 
+
+</details>
