@@ -1,52 +1,86 @@
-[← All projects](../README.md)
+[← Portfolio home](../README.md) · [Data source](docs/SOURCE.md) · [Technical notes](docs/TECHNICAL_NOTES.md)
 
-<img src="../assets/saudi-population.svg" alt="Saudi Population Analysis" width="100%"/>
+<img src="../assets/saudi-population.svg" width="100%" alt="Saudi Population Analysis"/>
 
-## See the regional picture.
+# Saudi Population Analysis
+**Exploring the regional picture behind national totals.**
 
-An exploration of official historical population data, with regional comparisons and a clear view of change over time.
+Python/pandas · SQLite/SQL · Power BI project files · DAX  
+Educational portfolio study · AI-assisted implementation
 
-**Python/pandas · SQLite/SQL · Power BI project files · DAX**
+## The question
+How was Saudi Arabia's population distributed across regions, and how did it change between 2010 and 2022?
 
-## Work covered
+## Data and starting point
+The **General Authority for Statistics (GASTAT)** official historical population series, exported from its public Tableau view. The source snapshot covers **2010–2022**, with all genders and nationalities included. [Source and attribution →](docs/SOURCE.md)
 
-1. Prepared official GASTAT data by region and year.
-2. Separated national totals to avoid counting population twice.
-3. Compared regional population and historical growth with SQL and charts.
+## From data to report
 
-## Outcome
-
-**Compared 13 regions across the 2010–2022 historical series.**
-
-The results describe historical population patterns, not current population estimates.
+| Stage | Work covered |
+|---|---|
+| **1. Read the official dataset** | Use the documented GASTAT CSV snapshot and retain region, year, and population values. |
+| **2. Standardize the figures** | Convert comma-separated population strings into integer counts suitable for analysis. |
+| **3. Separate totals from detail** | Exclude the 13 national aggregate rows from the regional fact table to avoid double counting. |
+| **4. Validate regional coverage** | Check the 169 region–year observations for repeated keys and reconcile regional sums with national totals. |
+| **5. Compare regions and years** | Calculate regional shares and historical growth, then prepare charts, result tables, and Power BI model/report files. |
 
 ## Analysis preview
 
-![Saudi Population Analysis — computed analysis preview](dashboard_preview.png)
+![Saudi Population Analysis — analysis preview](dashboard_preview.png)
 
-*Rendered in Python from the analysis outputs; not a Power BI screenshot.*
+*This preview is generated in Python from the analysis outputs. It is not a Power BI screenshot.*
 
-[**View the result table →**](outputs/regions_2022.csv) · [SQL queries](sql/) · [Power BI files](powerbi/)
+## Findings
+| Measure | Result |
+|---|---:|
+| Regions | 13 |
+| Years in the series | 13 |
+| Region–year observations | 169 |
+| Population in the 2022 regional total | 32,175,224 |
+| Three largest regions' share in 2022 | 67.6% |
+| Growth from 2010 to 2022 | 34.2% |
+
+**Population is concentrated in a small number of regions.** This historical comparison can help frame questions about demand and service coverage. A real location or expansion decision would also require current demand, income, competition, and operating-cost data.
+
+[2022 regional comparison](outputs/regions_2022.csv) · [National trend](outputs/national_trend.csv) · [Growth results](outputs/growth.csv)
+
+## An important analysis decision
+Population is **not additive across years**. Headline totals use the latest selected year rather than summing the entire series. National aggregate rows are checked separately from regional records, with small source rounding differences recorded.
+
+## Skills practiced
+This study provides practice in working with official Saudi data, checking geographic and time coverage, avoiding double counting, and presenting historical trends with the correct context.
+
+## Explore the work
+
+| File area | What you can review |
+|---|---|
+| [Python implementation](src/) | Data preparation and report-generation modules. |
+| [SQL queries](sql/) | Calculations and summaries behind the findings. |
+| [Computed outputs](outputs/) | Result tables and prepared model data. |
+| [Power BI files](powerbi/) | Report definitions, data model, and DAX measures. |
+| [Quality report](outputs/quality_report.json) | Data checks and preparation decisions. |
+| [Validation checks](tests/) | Checks for output consistency. |
+
+## Run it locally
+Download the repository and open a terminal in `saudi-population`:
+
+```bash
+pip install -r requirements.txt
+python analysis.py
+python -m unittest discover -s tests
+```
+
+The pipeline generates the analysis outputs and an offline `dashboard.html`. Open that generated HTML file locally to explore the report. For Power BI, follow the [opening instructions](powerbi/OPEN_IN_POWER_BI.md).
+
+## Project scope
+This is an educational, AI-assisted study. The findings describe the supplied sample or historical series; they do not demonstrate a commercial improvement. Power BI definitions are included, but Desktop refresh/render and Service publication remain unverified.
 
 <details>
-<summary>Source, implementation, and validation</summary>
+<summary>شرح المشروع بالعربي</summary>
 
-- [Data source and attribution](docs/SOURCE.md)
-- [Python implementation](src/) · [Run the analysis](analysis.py)
-- [Data quality report](outputs/quality_report.json)
-- [Method and setup](docs/TECHNICAL_NOTES.md)
-- [Power BI opening instructions](powerbi/OPEN_IN_POWER_BI.md)
-
-This is an educational project developed with AI assistance. Power BI project definitions are supplied; Desktop refresh/render and Service publication remain unverified. Results describe sample or historical data.
-
-</details>
-
-<details>
-<summary>الملخص بالعربي</summary>
-
-تحليل بيانات سكانية رسمية لمقارنة مناطق المملكة عبر السنوات، مع تنظيم البيانات وتجنب تكرار الإجماليات.
+يعرض المشروع توزيع السكان بين مناطق المملكة وتغيره بين 2010 و2022. شمل العمل تجهيز بيانات الهيئة العامة للإحصاء، وفصل الإجمالي الوطني عن بيانات المناطق لمنع التكرار، ثم حساب النمو ونسب المناطق.
 
 </details>
 
 ---
-[← All four projects](../README.md)
+[← Explore all four projects](../README.md)
