@@ -1,63 +1,60 @@
-# Smart Task
-### Daily tasks, priorities, and goals in one place.
+[← All projects](../README.md)
 
-[← All four projects](../README.md) · [Application files](index.html) · [JavaScript](js/app.js)
+<img src="../assets/smart-task.svg" alt="Smart Task" width="100%"/>
 
-![Smart Task feature overview](assets/workflow.svg)
+## A more organized day.
 
-*Feature overview illustration; not a screenshot.*
-
-## The idea
-A university website that helps users turn a busy day into an organized task list. Users can record what they need to do, choose a priority, and track completion.
+My university front-end project turns a daily to-do list into a simple workflow: capture a task, choose its priority, and track completion.
 
 **HTML · CSS · JavaScript · localStorage**
 
 ## What I built
 
-| Part | Work included |
+1. Built Home, Tasks, About, and Support pages.
+2. Connected task forms to add, edit, delete, and completion controls.
+3. Used localStorage to retain tasks in the same browser.
+
+## Outcome
+
+**A browser-based prototype for planning and tracking daily tasks.**
+
+The prototype brings task entry, manual priorities, goals, and completion tracking into one place.
+
+## Explore the app
+
+| Feature | Implementation |
 |---|---|
-| Page structure | Home, Tasks, About, and Support pages |
-| Task management | Add, edit, delete, and complete tasks |
-| Planning fields | Manual priority, due-date preferences, goal, and reason |
-| Browser storage | Save tasks between visits using localStorage |
-| Interface | Styled navigation, task forms, cards, and completion states |
+| Task management | Add, edit, delete, and mark tasks complete |
+| Planning | Set priority, due-date preferences, goal, and reason |
+| Persistence | Store tasks in the same browser using localStorage |
+| Page design | Separate HTML structure, CSS styling, and JavaScript behavior |
 
-## Inside the task planner
+[**Task interactions →**](js/app.js) · [Task page](tasks.html) · [Styles](css/)
 
-The task page contains a task-entry form and a list of saved tasks. Each task supports a priority, planning details, and completion controls.
+## Try it
 
-**Workflow:** Add a task → choose its priority → record the goal → track completion.
-
-## What this project demonstrates
-- Turning a simple user need into a multi-page interface.
-- Connecting form inputs to JavaScript interactions.
-- Keeping task records in local browser storage.
-- Separating page structure, styling, and behavior into clear files.
-
-## Explore the files
-
-| Location | Purpose |
-|---|---|
-| [index.html](index.html) | Home page and introduction |
-| [tasks.html](tasks.html) | Task-entry form and task list |
-| [js/app.js](js/app.js) | Task interactions and browser storage |
-| [css/](css/) | Page layouts and styling |
-| [about.html](about.html) | Project introduction |
-| [support.html](support.html) | Demonstration support form |
-| [assets/](assets/) | Project overview illustration |
-
-## Try it locally
-Download the repository, open `smart-task/index.html` in a browser, and select **Start Planning**. GitHub displays HTML source files; download them to run the website.
-
-## Scope
-This is a front-end university prototype. Priorities are selected manually; AI ranking, background notifications, recurring-task automation, and account synchronization are not implemented. The support form is a demonstration and does not send a message. Task data stays in the same browser.
+Download the repository, open `smart-task/index.html` in your browser, and select **Start Planning**. GitHub displays HTML source rather than running the application.
 
 <details>
-<summary><b>نبذة بالعربي</b></summary>
+<summary>Files and prototype scope</summary>
 
-موقع جامعي لتنظيم المهام اليومية وتحديد الأولويات ومتابعة الإنجاز. يشمل صفحات الموقع، ونموذج إضافة المهام، وتعديلها وحذفها، وحفظ البيانات داخل المتصفح باستخدام JavaScript. الأولوية يحددها المستخدم بنفسه، ولا توجد تنبيهات تعمل في الخلفية.
+- [index.html](index.html): home page.
+- [tasks.html](tasks.html): task form and saved task list.
+- [about.html](about.html): project introduction.
+- [support.html](support.html): demonstration support form.
+- [css/](css/): page styling.
+- [js/app.js](js/app.js): interactions and storage.
+
+Priorities are selected manually. Background reminders, automatic recurring tasks, AI ranking, and account synchronization are not implemented. The support form does not send messages. Use sample tasks when trying the prototype.
+
+</details>
+
+<details>
+<summary>الملخص بالعربي</summary>
+
+موقعي الجامعي لتنظيم المهام اليومية؛ بنيت صفحات الموقع ووظائف إدارة المهام وتحديد الأولوية ومتابعة الإنجاز، مع حفظ البيانات في المتصفح.
 
 </details>
 
 ---
-[← Back to the portfolio](../README.md)
+[← All four projects](../README.md)

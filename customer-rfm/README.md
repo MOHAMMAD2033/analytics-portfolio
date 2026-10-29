@@ -1,51 +1,52 @@
-# Customer RFM Segmentation
+[← All projects](../README.md)
 
-[← Back to all four projects](../README.md)
+<img src="../assets/customer-rfm.svg" alt="Customer RFM Segmentation" width="100%"/>
 
-**How can customers be grouped by their buying activity?**
+## Understand the customer.
 
-A learning project that turns purchase history into simple customer groups to support different follow-up ideas.
+A learning project that groups customers by when they last purchased, how often they ordered, and how much they spent.
 
-## Tools and data
-
-**Tools:** Python/pandas · SQLite/SQL · Power BI project files · DAX
-
-**Data:** The same historical Superstore sample used in the sales project. [Source details](docs/SOURCE.md)
+**Python/pandas · SQLite/SQL · Power BI project files · DAX**
 
 ## Work covered
 
-- Summarized purchases for each customer.
-- Calculated recency (how recently they bought), frequency (how often), and monetary value (how much they spent).
-- Applied clear grouping rules and prepared segment summaries and report files.
+1. Summarized each customer's purchase history.
+2. Calculated recency, frequency, and total spending.
+3. Applied transparent grouping rules and prepared segment reports.
 
-This is an educational portfolio simulation developed with AI assistance.
+## Outcome
 
-## Main outcome
+**Organized 793 customers into five segments.**
 
-793 customers were grouped into five segments. These groups suggest different engagement approaches; no marketing campaign or revenue improvement was measured.
+The groups provide a starting point for different customer follow-up ideas. They are rule-based segments, not predictions of customer churn.
 
-## Evidence
+## Analysis preview
 
-[View the result table](outputs/segments.csv) · [Data quality checks](outputs/quality_report.json)
+![Customer RFM Segmentation — computed analysis preview](dashboard_preview.png)
 
-## Preview
+*Rendered in Python from the analysis outputs; not a Power BI screenshot.*
 
-![Customer RFM Segmentation preview](dashboard_preview.png)
+[**View the result table →**](outputs/segments.csv) · [SQL queries](sql/) · [Power BI files](powerbi/)
 
-*Python-rendered preview, not a Power BI screenshot. Power BI Desktop refresh/render and online publication remain unverified.*
+<details>
+<summary>Source, implementation, and validation</summary>
 
-## Explore the work
-
-- [SQL queries](sql/)
-- [Analysis results](outputs/)
-- [Power BI files](powerbi/) · [Opening instructions](powerbi/OPEN_IN_POWER_BI.md)
-- [Python implementation](src/) · [Run entry point](analysis.py)
+- [Data source and attribution](docs/SOURCE.md)
+- [Python implementation](src/) · [Run the analysis](analysis.py)
+- [Data quality report](outputs/quality_report.json)
 - [Method and setup](docs/TECHNICAL_NOTES.md)
+- [Power BI opening instructions](powerbi/OPEN_IN_POWER_BI.md)
 
-## بالعربي
+This is an educational project developed with AI assistance. Power BI project definitions are supplied; Desktop refresh/render and Service publication remain unverified. Results describe sample or historical data.
 
-تقسيم العملاء حسب آخر شراء، وعدد الطلبات، وقيمة المشتريات. الهدف فهم اختلاف العملاء واقتراح أسلوب متابعة مناسب لكل مجموعة.
+</details>
 
+<details>
+<summary>الملخص بالعربي</summary>
+
+تقسيم العملاء حسب آخر شراء وعدد الطلبات وقيمة المشتريات، لتوضيح اختلاف سلوكهم واقتراح طرق متابعة مناسبة.
+
+</details>
 
 ---
-[← Portfolio](../README.md) · [How to explore this repository](../docs/PORTFOLIO_GUIDE.md)
+[← All four projects](../README.md)

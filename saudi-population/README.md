@@ -1,51 +1,52 @@
-# Saudi Population Analysis
+[← All projects](../README.md)
 
-[← Back to all four projects](../README.md)
+<img src="../assets/saudi-population.svg" alt="Saudi Population Analysis" width="100%"/>
 
-**How did population distribution change across Saudi regions?**
+## See the regional picture.
 
-A historical analysis of official Saudi population data, presented as regional comparisons and trends over time.
+An exploration of official historical population data, with regional comparisons and a clear view of change over time.
 
-## Tools and data
-
-**Tools:** Python/pandas · SQLite/SQL · Power BI project files · DAX
-
-**Data:** General Authority for Statistics (GASTAT), historical population series for 2010–2022. [Source details](docs/SOURCE.md)
+**Python/pandas · SQLite/SQL · Power BI project files · DAX**
 
 ## Work covered
 
-- Prepared population values and organized the data by region and year.
-- Separated national totals from regional records to avoid double counting.
-- Used SQL and visual summaries to compare regions and historical growth.
+1. Prepared official GASTAT data by region and year.
+2. Separated national totals to avoid counting population twice.
+3. Compared regional population and historical growth with SQL and charts.
 
-This is an educational portfolio simulation developed with AI assistance.
+## Outcome
 
-## Main outcome
+**Compared 13 regions across the 2010–2022 historical series.**
 
-A clear comparison of 13 Saudi regions over 2010–2022. The analysis describes historical population, not current estimates.
+The results describe historical population patterns, not current population estimates.
 
-## Evidence
+## Analysis preview
 
-[View the result table](outputs/regions_2022.csv) · [Data quality checks](outputs/quality_report.json)
+![Saudi Population Analysis — computed analysis preview](dashboard_preview.png)
 
-## Preview
+*Rendered in Python from the analysis outputs; not a Power BI screenshot.*
 
-![Saudi Population Analysis preview](dashboard_preview.png)
+[**View the result table →**](outputs/regions_2022.csv) · [SQL queries](sql/) · [Power BI files](powerbi/)
 
-*Python-rendered preview, not a Power BI screenshot. Power BI Desktop refresh/render and online publication remain unverified.*
+<details>
+<summary>Source, implementation, and validation</summary>
 
-## Explore the work
-
-- [SQL queries](sql/)
-- [Analysis results](outputs/)
-- [Power BI files](powerbi/) · [Opening instructions](powerbi/OPEN_IN_POWER_BI.md)
-- [Python implementation](src/) · [Run entry point](analysis.py)
+- [Data source and attribution](docs/SOURCE.md)
+- [Python implementation](src/) · [Run the analysis](analysis.py)
+- [Data quality report](outputs/quality_report.json)
 - [Method and setup](docs/TECHNICAL_NOTES.md)
+- [Power BI opening instructions](powerbi/OPEN_IN_POWER_BI.md)
 
-## بالعربي
+This is an educational project developed with AI assistance. Power BI project definitions are supplied; Desktop refresh/render and Service publication remain unverified. Results describe sample or historical data.
 
-تحليل بيانات سكانية رسمية لمقارنة مناطق المملكة وتغير السكان عبر السنوات. يشمل تنظيم البيانات وتجنب تكرار الإجماليات وعرض الاتجاهات.
+</details>
 
+<details>
+<summary>الملخص بالعربي</summary>
+
+تحليل بيانات سكانية رسمية لمقارنة مناطق المملكة عبر السنوات، مع تنظيم البيانات وتجنب تكرار الإجماليات.
+
+</details>
 
 ---
-[← Portfolio](../README.md) · [How to explore this repository](../docs/PORTFOLIO_GUIDE.md)
+[← All four projects](../README.md)

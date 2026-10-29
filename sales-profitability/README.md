@@ -1,51 +1,52 @@
-# Superstore Sales & Profitability
+[← All projects](../README.md)
 
-[← Back to all four projects](../README.md)
+<img src="../assets/sales-profitability.svg" alt="Superstore Sales Analysis" width="100%"/>
 
-**Which products generate sales but lose money?**
+## From sales to profitability.
 
-An educational analysis of the Superstore sales sample. The aim is to make sales and profit performance easier to compare before suggesting areas for further review.
+An educational analysis of Superstore sales data, designed to make product performance and profitability easier to understand.
 
-## Tools and data
-
-**Tools:** Python/pandas · SQLite/SQL · Power BI project files · DAX
-
-**Data:** Superstore sample supplied with my project files (2014–2017). [Source details](docs/SOURCE.md)
+**Python/pandas · SQLite/SQL · Power BI project files · DAX**
 
 ## Work covered
 
-- Prepared order data and checked dates and numeric values.
-- Used SQL to compare sales, profit, products, and regions.
-- Organized the results into visual summaries and prepared Power BI model/report files.
+1. Prepared retail order data and checked dates, values, and record IDs.
+2. Compared sales, profit, and discounts using SQL.
+3. Prepared visual summaries and Power BI model/report files.
 
-This is an educational portfolio simulation developed with AI assistance.
+## Outcome
 
-## Main outcome
+**Identified Tables as a loss-making product group.**
 
-The Tables subcategory had negative total profit in the sample, making it a useful starting point for a closer review of discounts and product mix.
+This points to a product group worth reviewing for discounts and product mix. It does not claim a measured business improvement.
 
-## Evidence
+## Analysis preview
 
-[View the result table](outputs/subcategories.csv) · [Data quality checks](outputs/quality_report.json)
+![Superstore Sales Analysis — computed analysis preview](dashboard_preview.png)
 
-## Preview
+*Rendered in Python from the analysis outputs; not a Power BI screenshot.*
 
-![Superstore Sales & Profitability preview](dashboard_preview.png)
+[**View the result table →**](outputs/subcategories.csv) · [SQL queries](sql/) · [Power BI files](powerbi/)
 
-*Python-rendered preview, not a Power BI screenshot. Power BI Desktop refresh/render and online publication remain unverified.*
+<details>
+<summary>Source, implementation, and validation</summary>
 
-## Explore the work
-
-- [SQL queries](sql/)
-- [Analysis results](outputs/)
-- [Power BI files](powerbi/) · [Opening instructions](powerbi/OPEN_IN_POWER_BI.md)
-- [Python implementation](src/) · [Run entry point](analysis.py)
+- [Data source and attribution](docs/SOURCE.md)
+- [Python implementation](src/) · [Run the analysis](analysis.py)
+- [Data quality report](outputs/quality_report.json)
 - [Method and setup](docs/TECHNICAL_NOTES.md)
+- [Power BI opening instructions](powerbi/OPEN_IN_POWER_BI.md)
 
-## بالعربي
+This is an educational project developed with AI assistance. Power BI project definitions are supplied; Desktop refresh/render and Service publication remain unverified. Results describe sample or historical data.
 
-تحليل بيانات متجر لفهم المبيعات والأرباح وتحديد المنتجات الخاسرة. يشمل تجهيز البيانات، المقارنة باستخدام SQL، وعرض النتائج في تقارير واضحة.
+</details>
 
+<details>
+<summary>الملخص بالعربي</summary>
+
+تحليل بيانات متجر لفهم المبيعات والأرباح وتحديد المنتجات الخاسرة، من تجهيز البيانات إلى تلخيص النتائج وعرضها.
+
+</details>
 
 ---
-[← Portfolio](../README.md) · [How to explore this repository](../docs/PORTFOLIO_GUIDE.md)
+[← All four projects](../README.md)
