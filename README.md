@@ -1,43 +1,92 @@
-# Mohammad Almejnah
-### Information Systems and Business Analytics Student
-Imam Abdulrahman Bin Faisal University · Dammam
+<img src="assets/portfolio-header.svg" alt="Mohammad Almejnah — Information Systems and Business Analytics portfolio" width="100%"/>
 
-I am interested in turning data into clear reports that help people understand business performance. My learning focuses on **Excel, SQL, Power BI, and Python/pandas**.
+<p align="center"><b>Imam Abdulrahman Bin Faisal University · Dammam</b><br/>Co-op candidate · 17 January 2027 · 16 weeks</p>
 
-**Seeking a 16-week co-op placement starting 17 January 2027.**
+I am an Information Systems and Business Analytics student interested in making data easier to understand. This portfolio brings together three analytics learning projects and a university web project.
 
-## Explore my four projects
+**Choose a project below to see its purpose, workflow, results, and supporting files.**
 
-| Project | What it does | Work covered |
-| :--- | :--- | :--- |
-| [**01 · Superstore Sales & Profitability**](sales-profitability/) | Finds products that sell well but lose money. | Data preparation, sales and profit analysis, dashboard reporting |
-| [**02 · Customer RFM Segmentation**](customer-rfm/) | Groups customers by their purchase activity. | Customer summaries, segmentation rules, visual reporting |
-| [**03 · Saudi Population Analysis**](saudi-population/) | Compares population trends across Saudi regions. | Public data preparation, regional comparisons, trend reporting |
-| [**04 · Smart Task**](smart-task/) | Helps users organize daily tasks and priorities. | University web project using HTML, CSS, and JavaScript |
+## Selected projects
 
-**Start with a project title:** each page explains the idea, the work involved, the outcome, and how to explore the files.
+### 01 / Superstore Sales & Profitability
 
-## Dashboard previews
+**Sales are growing. Is profit growing too?**  
+Exploring product performance, discounts, and profit in a retail sales sample.
 
-### 01 · Superstore Sales & Profitability
-[![Sales and profitability preview](sales-profitability/dashboard_preview.png)](sales-profitability/)
+[![Superstore Sales & Profitability dashboard preview](sales-profitability/dashboard_preview.png)](sales-profitability/)
 
-### 02 · Customer RFM Segmentation
-[![Customer segmentation preview](customer-rfm/dashboard_preview.png)](customer-rfm/)
+**Key finding:** Tables generated a loss of $17,725 in the historical sample.  
+**Practice areas:** Data preparation · SQL aggregation · Profit reporting
 
-### 03 · Saudi Population Analysis
-[![Saudi population preview](saudi-population/dashboard_preview.png)](saudi-population/)
+[**Explore project →**](sales-profitability/) · [View results](sales-profitability/outputs/subcategories.csv) · [SQL](sales-profitability/sql/) · [Power BI files](sales-profitability/powerbi/)
 
-*These images are Python-rendered previews. Power BI project files are included; Desktop refresh/render and online publication have not yet been verified.*
+---
 
-## About this portfolio
+### 02 / Customer RFM Segmentation
 
-The three analytics projects are educational simulations developed with AI assistance. They demonstrate learning workflows using sample or historical data, rather than client work or measured business improvements. Smart Task is my university front-end prototype. Each project documents its source and scope.
+**Which customers need a different approach?**  
+Grouping customers by purchase recency, frequency, and value.
 
-## نبذة بالعربي
+[![Customer RFM Segmentation dashboard preview](customer-rfm/dashboard_preview.png)](customer-rfm/)
 
-أنا محمد المجنه، طالب نظم المعلومات وتحليلات الأعمال بجامعة الإمام عبدالرحمن بن فيصل. مهتم بتحليل البيانات وبناء التقارير ولوحات المعلومات، وأبحث عن فرصة تدريب تعاوني أطبق فيها ما تعلمته وأطور مهاراتي.
+**Key finding:** 793 customers organized into five clear segments.  
+**Practice areas:** Customer summaries · Rule-based segmentation · Visual reporting
 
-المشاريع الأربعة: **تحليل المبيعات والربحية، تقسيم العملاء، تحليل السكان في السعودية، وموقع Smart Task لتنظيم المهام.** اضغط اسم المشروع لمعرفة فكرته وخطوات العمل ونتيجته.
+[**Explore project →**](customer-rfm/) · [View results](customer-rfm/outputs/segments.csv) · [SQL](customer-rfm/sql/) · [Power BI files](customer-rfm/powerbi/)
+
+---
+
+### 03 / Saudi Population Analysis
+
+**How has the population changed across regions?**  
+Comparing official historical population data across Saudi Arabia.
+
+[![Saudi Population Analysis dashboard preview](saudi-population/dashboard_preview.png)](saudi-population/)
+
+**Key finding:** 13 regions compared across the 2010–2022 historical series.  
+**Practice areas:** Public data preparation · Regional comparisons · Trend analysis
+
+[**Explore project →**](saudi-population/) · [View results](saudi-population/outputs/regions_2022.csv) · [SQL](saudi-population/sql/) · [Power BI files](saudi-population/powerbi/)
+
+---
+
+### 04 / Smart Task
+
+**A clearer way to organize daily tasks.**  
+A university front-end prototype with task entry, manual priorities, completion tracking, and browser storage.
+
+**HTML · CSS · JavaScript**
+
+[**Explore project →**](smart-task/) · [View application code](smart-task/js/app.js)
+
+---
+
+## Find your way around
+
+| Looking for | Start here |
+|---|---|
+| A quick overview | The four project introductions above |
+| What the work involved | Each project's **Work covered** section |
+| Results behind the visuals | Each project's **outputs** folder |
+| Implementation details | **src**, **sql**, and **powerbi** folders |
+| Sources and methodology | Each project's **docs** folder |
+| Setup and review guide | [Portfolio guide](docs/PORTFOLIO_GUIDE.md) |
+
+## About me
+
+My learning focuses on Excel, SQL, Power BI, and Python/pandas. I am seeking a co-op opportunity to develop practical skills in data preparation, reporting, and communicating findings.
+
+<details>
+<summary><b>نبذة بالعربي</b></summary>
+
+أنا محمد المجنه، طالب نظم المعلومات وتحليلات الأعمال بجامعة الإمام عبدالرحمن بن فيصل. مهتم بتحليل البيانات وعرضها بشكل واضح يساعد على فهم الأداء واتخاذ القرار. أبحث عن تدريب تعاوني يبدأ في 17 يناير 2027 لمدة 16 أسبوعًا.
+
+يعرض الملف أربعة مشاريع: تحليل المبيعات، وتقسيم العملاء، وتحليل السكان في المملكة، وموقع لتنظيم المهام. لكل مشروع شرح مختصر وروابط للنتائج والكود.
+
+</details>
+
+### Project context
+
+The analytics projects are educational simulations developed with AI assistance. Their previews are rendered in Python; Power BI project files are included but Desktop refresh/render and Service publication remain unverified. Smart Task is a university front-end prototype. Results describe sample or historical data, not measured commercial impact.
 
 [GitHub profile](https://github.com/MOHAMMAD2033)
