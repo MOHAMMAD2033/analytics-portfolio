@@ -1,4 +1,4 @@
-[← Portfolio home](../README.md) · [Task page](tasks.html) · [JavaScript](js/app.js)
+[← Portfolio home](../README.md) · [Task page](app/tasks.html) · [JavaScript](app/js/app.js)
 
 <img src="../assets/smart-task.svg" width="100%" alt="Smart Task — tasks, priorities, and goals"/>
 
@@ -44,7 +44,7 @@ For example, a student could add **“Prepare the SQL assignment”**, choose a 
 | Persistence | The array is converted to JSON for localStorage and read back when the page opens. |
 | Separation of files | HTML defines pages, CSS controls appearance, and JavaScript handles behavior. |
 
-[**Review the JavaScript →**](js/app.js) · [View task markup](tasks.html) · [Explore styling](css/)
+[**Review the JavaScript →**](app/js/app.js) · [View task markup](app/tasks.html) · [Explore styling](app/css/)
 
 ## What the project demonstrates
 Smart Task provides practical experience in connecting a form to visible changes on a page, managing a small collection of records, and preserving information between visits in the same browser.
@@ -53,7 +53,7 @@ It also shows the difference between a working front-end prototype and a complet
 
 ## Try the prototype
 1. Download the repository using **Code → Download ZIP** and extract it.
-2. Open `smart-task/index.html` in a browser.
+2. Open `smart-task/app/index.html` in a browser.
 3. Select **Start Planning** and add a sample task.
 4. Try marking it complete, changing its details, or deleting it.
 5. Refresh the task page to check local persistence in that browser.
@@ -64,12 +64,12 @@ GitHub's file viewer shows HTML source; it does not run the website. Local stora
 
 | File | Purpose |
 |---|---|
-| [index.html](index.html) | Home page and entry point. |
-| [tasks.html](tasks.html) | Task form and saved task list. |
-| [about.html](about.html) | Introduction to the project. |
-| [support.html](support.html) | Demonstration support form. |
-| [css/](css/) | Shared and page-specific styles. |
-| [js/app.js](js/app.js) | Task interactions, rendering, and browser storage. |
+| [index.html](app/index.html) | Home page and entry point. |
+| [tasks.html](app/tasks.html) | Task form and saved task list. |
+| [about.html](app/about.html) | Introduction to the project. |
+| [support.html](app/support.html) | Demonstration support form. |
+| [css/](app/css/) | Shared and page-specific styles. |
+| [js/app.js](app/js/app.js) | Task interactions, rendering, and browser storage. |
 
 ## Current scope and possible improvements
 Priorities are chosen manually. Due preferences are stored and displayed, but background reminders, automatic daily recurrence, and AI ranking are not implemented. There are no user accounts or cross-device synchronization. The support form displays a confirmation but does not send a message.

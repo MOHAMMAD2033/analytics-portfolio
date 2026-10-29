@@ -7,4 +7,4 @@
 
 This PBIP was generated programmatically. JSON schema checks and numeric checks were performed, but Power BI Desktop refresh/render has NOT been run in this environment. The PNG and HTML previews are independent Python/web renderings, not screenshots of Power BI. If Desktop reports an issue, the cleaned CSVs, SQL and DAX are supplied separately.
 
-To refresh with changed data, rerun `python analysis.py` from the project root. This rebuilds the embedded snapshot. Do not sum population across years. RFM scores refer to the documented historical snapshot, not current customer activity.
+To refresh with changed data, rerun `python analysis.py` from the project's `implementation/` folder. This rebuilds the embedded snapshot. Do not sum population across years. RFM scores refer to the documented historical snapshot, not current customer activity.

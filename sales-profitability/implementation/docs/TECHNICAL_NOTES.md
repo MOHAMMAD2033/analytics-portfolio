@@ -1,6 +1,6 @@
 # Technical notes
 
-[← Project overview](../README.md)
+[← Project overview](../../README.md)
 
 **Portfolio simulation · AI-assisted implementation · October 2026**
 
@@ -14,11 +14,13 @@ Which product groups generate revenue but lose money?
 - Overall profit margin is 12.47%, calculated as total profit / total sales.
 - Tables has the lowest aggregate profit ($-17,725.48); review product mix and discount policy before making changes.
 
-![Independently rendered dashboard preview](../dashboard_preview.png)
+![Independently rendered dashboard preview](../../dashboard_preview.png)
 
 The image is a Python-rendered preview, not a Power BI screenshot. Run `python analysis.py` to generate `dashboard.html`, then open it locally for an interactive preview with filters and CSV export.
 
 ## Reproduce
+
+Run these commands from this project's `implementation/` folder.
 
 ```bash
 python -m venv .venv

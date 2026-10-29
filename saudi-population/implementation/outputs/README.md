@@ -1,8 +1,8 @@
 # Analysis results
 
-[← Superstore Sales & Profitability](../README.md)
+[← Saudi Population Analysis](../../README.md)
 
-**Start with [subcategories.csv](subcategories.csv).**
+**Start with [regions_2022.csv](regions_2022.csv).**
 
 - [summary.json](summary.json): headline figures.
 - [insights.json](insights.json): short findings.

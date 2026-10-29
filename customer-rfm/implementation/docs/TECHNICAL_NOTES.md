@@ -1,24 +1,26 @@
 # Technical notes
 
-[← Project overview](../README.md)
+[← Project overview](../../README.md)
 
 **Portfolio simulation · AI-assisted implementation · October 2026**
 
 ## Business question
 
-How concentrated was the population across Saudi regions, and how did it change from 2010 to 2022?
+Which historical customers merit different retention or engagement approaches?
 
 ## Results
 
-- 32,175,224 residents in the 2022 regional total across 13 regions.
-- The three largest regions account for 67.6% of the 2022 total.
-- Population increased 34.2% between 2010 and 2022; this historical series is not a 2026 population estimate.
+- 793 customers assigned to 5 mutually exclusive segments.
+- Champions account for 33.4% of historical revenue.
+- 133 customers meet the heuristic at-risk rule; a retention test is proposed, not an observed uplift.
 
-![Independently rendered dashboard preview](../dashboard_preview.png)
+![Independently rendered dashboard preview](../../dashboard_preview.png)
 
 The image is a Python-rendered preview, not a Power BI screenshot. Run `python analysis.py` to generate `dashboard.html`, then open it locally for an interactive preview with filters and CSV export.
 
 ## Reproduce
+
+Run these commands from this project's `implementation/` folder.
 
 ```bash
 python -m venv .venv
@@ -32,13 +34,12 @@ The pipeline reads the bundled source snapshot, cleans it with Python/pandas, lo
 
 ## Method and controls
 
-- Download the official GASTAT CSV from the public Tableau view with default All gender / All nationality selections.
-- Convert comma-separated numeric strings into integer population counts.
-- Exclude 13 All national aggregate rows from the regional fact table to prevent double counting.
-- Retain 169 observations: 13 regions × 13 years, with no repeated region-year keys.
-- Reconcile yearly regional sums to the source national totals (small rounding differences tolerated and reported).
-- Compare 2010 and 2022 endpoints. Population is not additive across time: headline cards use the latest selected year.
-- This is a historical exercise, not the latest population estimate or a sufficient standalone basis for expansion decisions.
+- Recency = days between the fixed snapshot (2017-12-31) and the last purchase.
+- Frequency = distinct Order IDs, not order lines. Monetary = sum of sales in USD.
+- Equal metric values receive equal scores using average percentile ranks, mapped to 1–4. Recency is reversed.
+- Rules in priority order: Champions (R>=3,F>=3,M>=3); At risk (R<=2,F>=3); Loyal (R>=3,F>=3); Promising (R>=3); otherwise Needs attention.
+- All customers belong to exactly one segment. Scoring is fixed at the snapshot and does not recompute when report slicers change.
+- These are transparent heuristic segments, not trained predictions or proof of customer churn.
 
 
 ## Power BI
@@ -65,4 +66,4 @@ See [source notes](SOURCE.md). This project was prepared with AI assistance for 
 
 ## Suggested next actions
 
-Combine this historical population view with current demand, income, competition and operating cost data before any site-selection decision. Do not infer causal drivers from this table.
+Use different outreach hypotheses for Champions and At risk; validate with a controlled retention test. No campaign was run and no revenue uplift is claimed.

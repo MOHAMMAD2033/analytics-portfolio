@@ -1,4 +1,4 @@
-[← Portfolio home](../README.md) · [Data source](docs/SOURCE.md) · [Technical notes](docs/TECHNICAL_NOTES.md)
+[← Portfolio home](../README.md) · [Data source](implementation/docs/SOURCE.md) · [Technical notes](implementation/docs/TECHNICAL_NOTES.md)
 
 <img src="../assets/saudi-population.svg" width="100%" alt="Saudi Population Analysis"/>
 
@@ -12,7 +12,7 @@ Educational portfolio study · AI-assisted implementation
 How was Saudi Arabia's population distributed across regions, and how did it change between 2010 and 2022?
 
 ## Data and starting point
-The **General Authority for Statistics (GASTAT)** official historical population series, exported from its public Tableau view. The source snapshot covers **2010–2022**, with all genders and nationalities included. [Source and attribution →](docs/SOURCE.md)
+The **General Authority for Statistics (GASTAT)** official historical population series, exported from its public Tableau view. The source snapshot covers **2010–2022**, with all genders and nationalities included. [Source and attribution →](implementation/docs/SOURCE.md)
 
 ## From data to report
 
@@ -42,7 +42,7 @@ The **General Authority for Statistics (GASTAT)** official historical population
 
 **Population is concentrated in a small number of regions.** This historical comparison can help frame questions about demand and service coverage. A real location or expansion decision would also require current demand, income, competition, and operating-cost data.
 
-[2022 regional comparison](outputs/regions_2022.csv) · [National trend](outputs/national_trend.csv) · [Growth results](outputs/growth.csv)
+[2022 regional comparison](implementation/outputs/regions_2022.csv) · [National trend](implementation/outputs/national_trend.csv) · [Growth results](implementation/outputs/growth.csv)
 
 ## An important analysis decision
 Population is **not additive across years**. Headline totals use the latest selected year rather than summing the entire series. National aggregate rows are checked separately from regional records, with small source rounding differences recorded.
@@ -54,15 +54,15 @@ This study provides practice in working with official Saudi data, checking geogr
 
 | File area | What you can review |
 |---|---|
-| [Python implementation](src/) | Data preparation and report-generation modules. |
-| [SQL queries](sql/) | Calculations and summaries behind the findings. |
-| [Computed outputs](outputs/) | Result tables and prepared model data. |
-| [Power BI files](powerbi/) | Report definitions, data model, and DAX measures. |
-| [Quality report](outputs/quality_report.json) | Data checks and preparation decisions. |
-| [Validation checks](tests/) | Checks for output consistency. |
+| [Python implementation](implementation/src/) | Data preparation and report-generation modules. |
+| [SQL queries](implementation/sql/) | Calculations and summaries behind the findings. |
+| [Computed outputs](implementation/outputs/) | Result tables and prepared model data. |
+| [Power BI files](implementation/powerbi/) | Report definitions, data model, and DAX measures. |
+| [Quality report](implementation/outputs/quality_report.json) | Data checks and preparation decisions. |
+| [Validation checks](implementation/tests/) | Checks for output consistency. |
 
 ## Run it locally
-Download the repository and open a terminal in `saudi-population`:
+Download the repository and open a terminal in `saudi-population/implementation`:
 
 ```bash
 pip install -r requirements.txt
@@ -70,7 +70,7 @@ python analysis.py
 python -m unittest discover -s tests
 ```
 
-The pipeline generates the analysis outputs and an offline `dashboard.html`. Open that generated HTML file locally to explore the report. For Power BI, follow the [opening instructions](powerbi/OPEN_IN_POWER_BI.md).
+The pipeline generates the analysis outputs and an offline `dashboard.html`. Open that generated HTML file locally to explore the report. For Power BI, follow the [opening instructions](implementation/powerbi/OPEN_IN_POWER_BI.md).
 
 ## Project scope
 This is an educational, AI-assisted study. The findings describe the supplied sample or historical series; they do not demonstrate a commercial improvement. Power BI definitions are included, but Desktop refresh/render and Service publication remain unverified.

@@ -1,8 +1,8 @@
 # Analysis results
 
-[← Saudi Population Analysis](../README.md)
+[← Customer RFM Segmentation](../../README.md)
 
-**Start with [regions_2022.csv](regions_2022.csv).**
+**Start with [segments.csv](segments.csv).**
 
 - [summary.json](summary.json): headline figures.
 - [insights.json](insights.json): short findings.

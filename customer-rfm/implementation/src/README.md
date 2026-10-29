@@ -1,6 +1,6 @@
 # Python implementation
 
-[← Superstore Sales & Profitability](../README.md)
+[← Customer RFM Segmentation](../../README.md)
 
 | File | Purpose |
 |---|---|
@@ -8,4 +8,4 @@
 | dashboard_builder.py | Builds the local HTML dashboard |
 | powerbi_builder.py | Generates Power BI project definitions |
 
-Run `python analysis.py` from the project folder, not from this directory.
+Run `python analysis.py` from the project's `implementation/` folder, not from this directory.

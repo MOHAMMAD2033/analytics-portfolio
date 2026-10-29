@@ -1,4 +1,4 @@
-[← Portfolio home](../README.md) · [Data source](docs/SOURCE.md) · [Technical notes](docs/TECHNICAL_NOTES.md)
+[← Portfolio home](../README.md) · [Data source](implementation/docs/SOURCE.md) · [Technical notes](implementation/docs/TECHNICAL_NOTES.md)
 
 <img src="../assets/sales-profitability.svg" width="100%" alt="Superstore Sales & Profitability"/>
 
@@ -12,7 +12,7 @@ Educational portfolio study · AI-assisted implementation
 Which product groups generate sales but lose money—and what should be reviewed next?
 
 ## Data and starting point
-An educational Superstore sample supplied with the original project. It contains retail order lines from **2014–2017**. Customer names are omitted from the portfolio copy. [Source and attribution →](docs/SOURCE.md)
+An educational Superstore sample supplied with the original project. It contains retail order lines from **2014–2017**. Customer names are omitted from the portfolio copy. [Source and attribution →](implementation/docs/SOURCE.md)
 
 ## From data to report
 
@@ -40,7 +40,7 @@ An educational Superstore sample supplied with the original project. It contains
 
 **Tables is the main investigation point.** Its negative aggregate profit shows why ranking products only by sales can miss a problem. The next step would be to examine individual products and discount patterns before testing a pricing change.
 
-[Product results](outputs/subcategories.csv) · [Discount analysis](outputs/discounts.csv) · [Monthly trends](outputs/monthly.csv)
+[Product results](implementation/outputs/subcategories.csv) · [Discount analysis](implementation/outputs/discounts.csv) · [Monthly trends](implementation/outputs/monthly.csv)
 
 ## An important analysis decision
 Profit margin is calculated as **total profit ÷ total sales**. Averaging individual row margins would answer a different question. Orders are counted by distinct Order ID, because an order may contain multiple product lines.
@@ -52,15 +52,15 @@ This study provides practice in preparing retail data, distinguishing sales from
 
 | File area | What you can review |
 |---|---|
-| [Python implementation](src/) | Data preparation and report-generation modules. |
-| [SQL queries](sql/) | Calculations and summaries behind the findings. |
-| [Computed outputs](outputs/) | Result tables and prepared model data. |
-| [Power BI files](powerbi/) | Report definitions, data model, and DAX measures. |
-| [Quality report](outputs/quality_report.json) | Data checks and preparation decisions. |
-| [Validation checks](tests/) | Checks for output consistency. |
+| [Python implementation](implementation/src/) | Data preparation and report-generation modules. |
+| [SQL queries](implementation/sql/) | Calculations and summaries behind the findings. |
+| [Computed outputs](implementation/outputs/) | Result tables and prepared model data. |
+| [Power BI files](implementation/powerbi/) | Report definitions, data model, and DAX measures. |
+| [Quality report](implementation/outputs/quality_report.json) | Data checks and preparation decisions. |
+| [Validation checks](implementation/tests/) | Checks for output consistency. |
 
 ## Run it locally
-Download the repository and open a terminal in `sales-profitability`:
+Download the repository and open a terminal in `sales-profitability/implementation`:
 
 ```bash
 pip install -r requirements.txt
@@ -68,7 +68,7 @@ python analysis.py
 python -m unittest discover -s tests
 ```
 
-The pipeline generates the analysis outputs and an offline `dashboard.html`. Open that generated HTML file locally to explore the report. For Power BI, follow the [opening instructions](powerbi/OPEN_IN_POWER_BI.md).
+The pipeline generates the analysis outputs and an offline `dashboard.html`. Open that generated HTML file locally to explore the report. For Power BI, follow the [opening instructions](implementation/powerbi/OPEN_IN_POWER_BI.md).
 
 ## Project scope
 This is an educational, AI-assisted study. The findings describe the supplied sample or historical series; they do not demonstrate a commercial improvement. Power BI definitions are included, but Desktop refresh/render and Service publication remain unverified.

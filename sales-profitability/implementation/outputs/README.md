@@ -1,8 +1,8 @@
 # Analysis results
 
-[← Customer RFM Segmentation](../README.md)
+[← Superstore Sales & Profitability](../../README.md)
 
-**Start with [segments.csv](segments.csv).**
+**Start with [subcategories.csv](subcategories.csv).**
 
 - [summary.json](summary.json): headline figures.
 - [insights.json](insights.json): short findings.

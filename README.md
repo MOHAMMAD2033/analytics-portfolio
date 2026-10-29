@@ -28,7 +28,7 @@ The workflow prepares order data, checks dates and numeric values, loads the cle
 
 **Why it matters:** The analysis illustrates why product decisions need both revenue and profit measures. Reviewing discounts and product mix would be a next step; no business improvement is claimed.
 
-[**Explore the project →**](sales-profitability/) · [SQL analysis](sales-profitability/sql/) · [Results](sales-profitability/outputs/subcategories.csv)
+[**Explore the project →**](sales-profitability/) · [SQL analysis](sales-profitability/implementation/sql/) · [Results](sales-profitability/implementation/outputs/subcategories.csv)
 
 ---
 
@@ -48,7 +48,7 @@ The workflow summarizes transactions by customer, calculates RFM scores, and ass
 
 **Why it matters:** Segmentation provides a more focused starting point for customer engagement than treating everyone alike. These groups describe past behavior; they are not a prediction of future purchases.
 
-[**Explore the project →**](customer-rfm/) · [RFM queries](customer-rfm/sql/) · [Segment results](customer-rfm/outputs/segments.csv)
+[**Explore the project →**](customer-rfm/) · [RFM queries](customer-rfm/implementation/sql/) · [Segment results](customer-rfm/implementation/outputs/segments.csv)
 
 ---
 
@@ -68,7 +68,7 @@ The workflow standardizes population values, separates national totals from regi
 
 **Why it matters:** Regional comparisons help frame questions about demand and service coverage. The figures describe a historical series and would need current supporting data for a real planning decision.
 
-[**Explore the project →**](saudi-population/) · [Data attribution](saudi-population/docs/SOURCE.md) · [Regional results](saudi-population/outputs/regions_2022.csv)
+[**Explore the project →**](saudi-population/) · [Data attribution](saudi-population/implementation/docs/SOURCE.md) · [Regional results](saudi-population/implementation/outputs/regions_2022.csv)
 
 ---
 
@@ -87,7 +87,7 @@ Smart Task is my university front-end prototype for keeping daily tasks, priorit
 
 **Work represented:** Four connected pages—Home, Tasks, About, and Support—with separate HTML, CSS, and JavaScript files. The project provides practice in form handling, page styling, user interactions, and browser storage.
 
-[**Explore the project →**](smart-task/) · [Task page source](smart-task/tasks.html) · [JavaScript implementation](smart-task/js/app.js)
+[**Explore the project →**](smart-task/) · [Task page source](smart-task/app/tasks.html) · [JavaScript implementation](smart-task/app/js/app.js)
 
 ---
 

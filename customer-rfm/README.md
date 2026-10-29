@@ -1,4 +1,4 @@
-[← Portfolio home](../README.md) · [Data source](docs/SOURCE.md) · [Technical notes](docs/TECHNICAL_NOTES.md)
+[← Portfolio home](../README.md) · [Data source](implementation/docs/SOURCE.md) · [Technical notes](implementation/docs/TECHNICAL_NOTES.md)
 
 <img src="../assets/customer-rfm.svg" width="100%" alt="Customer RFM Segmentation"/>
 
@@ -12,7 +12,7 @@ Educational portfolio study · AI-assisted implementation
 How can historical purchasing behavior help us propose more relevant follow-up for different customers?
 
 ## Data and starting point
-The educational **2014–2017 Superstore sample** used in the sales project. Here, the unit of analysis changes from product/order line to customer. Names are omitted; customer IDs are used for grouping. [Source and attribution →](docs/SOURCE.md)
+The educational **2014–2017 Superstore sample** used in the sales project. Here, the unit of analysis changes from product/order line to customer. Names are omitted; customer IDs are used for grouping. [Source and attribution →](implementation/docs/SOURCE.md)
 
 ## From data to report
 
@@ -40,7 +40,7 @@ The educational **2014–2017 Superstore sample** used in the sales project. Her
 
 **The segments suggest different follow-up hypotheses.** Champions could be considered for loyalty-focused communication; customers matching the At risk rule could be considered for a re-engagement test. No campaign was run, and no retention uplift is claimed.
 
-[Segment summary](outputs/segments.csv) · [Customer-level RFM](outputs/rfm_customers.csv)
+[Segment summary](implementation/outputs/segments.csv) · [Customer-level RFM](implementation/outputs/rfm_customers.csv)
 
 ## An important analysis decision
 The snapshot is fixed at **31 December 2017**. Recency means days since the last purchase; Frequency counts distinct orders; Monetary sums sales. Scores remain fixed when report filters change. These are transparent rules, not a machine-learning churn model.
@@ -52,15 +52,15 @@ This study provides practice in moving from transaction rows to customer-level a
 
 | File area | What you can review |
 |---|---|
-| [Python implementation](src/) | Data preparation and report-generation modules. |
-| [SQL queries](sql/) | Calculations and summaries behind the findings. |
-| [Computed outputs](outputs/) | Result tables and prepared model data. |
-| [Power BI files](powerbi/) | Report definitions, data model, and DAX measures. |
-| [Quality report](outputs/quality_report.json) | Data checks and preparation decisions. |
-| [Validation checks](tests/) | Checks for output consistency. |
+| [Python implementation](implementation/src/) | Data preparation and report-generation modules. |
+| [SQL queries](implementation/sql/) | Calculations and summaries behind the findings. |
+| [Computed outputs](implementation/outputs/) | Result tables and prepared model data. |
+| [Power BI files](implementation/powerbi/) | Report definitions, data model, and DAX measures. |
+| [Quality report](implementation/outputs/quality_report.json) | Data checks and preparation decisions. |
+| [Validation checks](implementation/tests/) | Checks for output consistency. |
 
 ## Run it locally
-Download the repository and open a terminal in `customer-rfm`:
+Download the repository and open a terminal in `customer-rfm/implementation`:
 
 ```bash
 pip install -r requirements.txt
@@ -68,7 +68,7 @@ python analysis.py
 python -m unittest discover -s tests
 ```
 
-The pipeline generates the analysis outputs and an offline `dashboard.html`. Open that generated HTML file locally to explore the report. For Power BI, follow the [opening instructions](powerbi/OPEN_IN_POWER_BI.md).
+The pipeline generates the analysis outputs and an offline `dashboard.html`. Open that generated HTML file locally to explore the report. For Power BI, follow the [opening instructions](implementation/powerbi/OPEN_IN_POWER_BI.md).
 
 ## Project scope
 This is an educational, AI-assisted study. The findings describe the supplied sample or historical series; they do not demonstrate a commercial improvement. Power BI definitions are included, but Desktop refresh/render and Service publication remain unverified.
